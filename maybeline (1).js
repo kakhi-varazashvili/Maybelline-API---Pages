@@ -1,6 +1,8 @@
 let main = document.querySelector(".main")
 let sel = document.querySelector("select")
 let inp = document.querySelector("input")
+
+let page = document.querySelectorAll(".page")
 let arr2 = []
 let arr3 = []
 fetch("https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline")
@@ -35,6 +37,7 @@ function DisplayItems(arr){
     main.innerHTML = ""
     for(var i of arr){
         var tmp = `
+
         <div class="card" style="width: 18rem;">
   <img src="${i.image_link}" class="card-img-top" alt="...">
   <div class="card-body">
